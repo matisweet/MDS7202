@@ -14,6 +14,7 @@ Este repositorio contiene los laboratorios y entregas del curso, organizados por
 
 ## Estructura del repositorio
 
+<pre>
 .
 ├── labs/
 │   ├── lab_1/
@@ -21,10 +22,13 @@ Este repositorio contiene los laboratorios y entregas del curso, organizados por
 ├── pyproject.toml
 ├── .pre-commit-config.yaml
 └── README.md
+</pre>
 
 ## Configuración del entorno
 
+<pre>
 uv venv
 source .venv/bin/activate
 uv sync
 pre-commit install
+</pre>
