@@ -206,3 +206,26 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 .DS_Store
+
+# ==========================================
+# 🛡️ REGLAS ESPECÍFICAS PARA DATA SCIENCE (MDS7202)
+# ==========================================
+
+# Carpetas de datos locales
+data/
+data/raw/
+data/processed/
+
+# Archivos de datos pesados y modelos
+*.csv
+*.tsv
+*.xlsx
+*.pdf
+*.pickle
+*.parquet
+*.h5
+*.model
+
+# Bases de datos adicionales
+*.db
+*.sqlite
