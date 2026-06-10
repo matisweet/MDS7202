@@ -5,11 +5,13 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
+    "fastapi>=0.136.3",
     "jupyterlab>=4.5.6",
     "kaleido>=1.2.0",
     "lightgbm>=4.6.0",
     "matplotlib>=3.10.8",
     "missingno>=0.5.2",
+    "mlflow>=1.27.0",
     "nltk>=3.9.4",
     "numpy>=2.4.3",
     "optuna>=4.8.0",
@@ -17,11 +19,14 @@ dependencies = [
     "pillow>=12.1.1",
     "plotly>=6.6.0",
     "pre-commit>=4.5.1",
+    "protobuf==3.20.3",
     "ruff>=0.15.6",
     "scikit-learn>=1.8.0",
     "scipy>=1.17.1",
+    "setuptools<82.0.0",
     "shap>=0.51.0",
     "umap-learn>=0.5.12",
+    "uvicorn>=0.49.0",
     "xgboost>=3.2.0",
 ]
 

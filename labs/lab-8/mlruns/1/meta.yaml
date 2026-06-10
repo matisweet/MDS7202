@@ -1,0 +1,4 @@
+artifact_location: file:///e:/Equipo/Mati/Escritorio/MDS7202/MDS7202/labs/lab-8/mlruns/1
+experiment_id: '1'
+lifecycle_stage: active
+name: Lab8 XGBoost Optuna
