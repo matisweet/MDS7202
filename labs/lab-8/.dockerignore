@@ -1,0 +1,13 @@
+# cosas del entrenamiento que la api no ocupa
+mlruns/
+optimize.py
+water_potability.csv
+
+# notebooks
+*.ipynb
+.ipynb_checkpoints/
+
+# caches de python y entorno virtual
+__pycache__/
+*.pyc
+.venv/

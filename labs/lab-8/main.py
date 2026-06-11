@@ -15,7 +15,7 @@ def make_prediction(data: dict):
     features = pd.DataFrame(
         [
             {
-                "ph": data["pH"],
+                "ph": data["ph"],
                 "Hardness": data["Hardness"],
                 "Solids": data["Solids"],
                 "Chloramines": data["Chloramines"],
@@ -39,7 +39,7 @@ async def home():
         "message": "API para predecir potabilidad del agua",
         "problem": "Clasificar si una muestra de agua es potable o no potable.",
         "input": [
-            "pH",
+            "ph",
             "Hardness",
             "Solids",
             "Chloramines",
