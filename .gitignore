@@ -229,3 +229,23 @@ data/processed/
 # Bases de datos adicionales
 *.db
 *.sqlite
+.env
+# Secretos
+.env
+**/.env
+
+# Entornos virtuales
+.venv/
+**/.venv/
+
+# Cachés de Python y Ruff
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.ruff_cache/
+**/.ruff_cache/
+
+# Artefactos locales de experimentación
+ProyectoFinal/mlruns/
+ProyectoFinal/mlflow.db
+ProyectoFinal/.cache_pipelines/

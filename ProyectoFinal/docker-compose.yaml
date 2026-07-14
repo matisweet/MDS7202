@@ -1,0 +1,61 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    image: chaucherapp-backend:latest
+    container_name: chaucherapp-backend
+
+    environment:
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./backend:/app/backend
+      - ./modelo_final.pkl:/app/modelo_final.pkl:ro
+
+    networks:
+      - chaucherapp-network
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    image: chaucherapp-frontend:latest
+    container_name: chaucherapp-frontend
+
+    environment:
+      BACKEND_URL: ${BACKEND_URL_DOCKER}
+      FRONTEND_PORT: ${FRONTEND_PORT:-7860}
+
+    ports:
+      - "7860:7860"
+
+    volumes:
+      - ./frontend:/app/frontend
+
+    networks:
+      - chaucherapp-network
+
+    depends_on:
+      backend:
+        condition: service_healthy
+
+networks:
+  chaucherapp-network:
+    name: chaucherapp-network
+    driver: bridge
